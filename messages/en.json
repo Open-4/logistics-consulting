@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "title": "Far Horizon International Logistics Consulting",
+    "description": "Professional international logistics and supply chain consulting services for global business operations"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "cases": "Case Studies",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Global Logistics, Smart Navigation",
+    "subtitle": "Two decades deep in international logistics consulting, delivering end-to-end supply chain solutions for businesses going global",
+    "cta_primary": "Free Consultation",
+    "cta_secondary": "Our Services",
+    "stats_clients": "Clients Served",
+    "stats_projects": "Projects Delivered",
+    "stats_countries": "Countries Covered"
+  },
+  "about": {
+    "title": "About Far Horizon",
+    "description": "Far Horizon International Logistics Consulting is a professional advisory firm specializing in cross-border supply chain optimization, with offices in Shanghai, Hong Kong, and Singapore. Leveraging deep industry expertise and a global perspective, we help businesses achieve logistics cost optimization and operational efficiency in a complex and ever-changing international trade environment.",
+    "mission_title": "Our Mission",
+    "mission": "Empower every globalizing enterprise with world-class logistics competitiveness",
+    "vision_title": "Our Vision",
+    "vision": "To become the most trusted international logistics consulting brand in Asia Pacific",
+    "values_title": "Core Values",
+    "value_professional": "Professionalism",
+    "value_professional_desc": "Senior consultant team with two decades of industry experience",
+    "value_global": "Global Reach",
+    "value_global_desc": "Localized service network covering all major trade regions worldwide",
+    "value_innovation": "Innovation",
+    "value_innovation_desc": "Continuously driving supply chain transformation through digital technology",
+    "value_trust": "Trust",
+    "value_trust_desc": "Putting client interests first, building long-term partnerships"
+  },
+  "why_us": {
+    "title": "Why Choose Us",
+    "description": "Two decades of excellence, delivering success through professionalism and trust"
+  },
+  "services": {
+    "title": "Core Services",
+    "description": "Full-spectrum logistics and supply chain consulting services, from strategic planning to execution",
+    "supply_chain_title": "Supply Chain Optimization",
+    "supply_chain_desc": "End-to-end supply chain diagnosis and restructuring, including network optimization, inventory strategy development, and procurement process reengineering to find the optimal balance between cost and efficiency.",
+    "freight_title": "Freight Consulting",
+    "freight_desc": "Ocean, air, rail, and multimodal transport solution design with carrier management, data-driven route planning, and rate negotiation strategies.",
+    "customs_title": "Customs Compliance",
+    "customs_desc": "Import/export customs compliance audits, HS code classification, rules of origin application, and FTA preferential tariff utilization strategies to reduce compliance risk and save duty costs.",
+    "warehouse_title": "Warehousing & Distribution",
+    "warehouse_desc": "Warehouse site selection and layout optimization, WMS system selection and implementation, last-mile delivery solution design, and cross-border warehousing strategy planning.",
+    "trade_title": "Trade Compliance",
+    "trade_desc": "Export control and sanctions screening, AEO certification guidance, trade compliance management system setup, and cross-border data flow compliance assessment.",
+    "digital_title": "Digital Transformation",
+    "digital_desc": "Logistics IT strategic planning, TMS/WMS system integration, supply chain visibility platform development, and AI-driven forecasting and decision support systems.",
+    "risk_title": "Risk Management",
+    "risk_desc": "Supply chain resilience assessment, geopolitical risk analysis, contingency planning and drills, and supplier risk tiering management.",
+    "sustainability_title": "Green Logistics",
+    "sustainability_desc": "Carbon emission accounting and reduction roadmap planning, green transportation design, sustainable supply chain certification consulting, and ESG reporting support."
+  },
+  "cases": {
+    "title": "Case Studies",
+    "description": "Proven consulting value through real-world success stories",
+    "case1_title": "Asia-Pacific Supply Chain Restructuring for a Consumer Electronics Company",
+    "case1_desc": "Consolidated the client's Asia-Pacific warehousing network from 7 locations to 3 regional hubs, improving inventory turnover by 40% and reducing annual logistics costs by 25%.",
+    "case2_title": "Customs Compliance System for an Automotive Parts Manufacturer",
+    "case2_desc": "Guided the client through AEO Advanced Certification, reducing customs inspection rate from 8% to 0.5%, shortening clearance time by 60%, and saving approximately $3 million in annual duty costs.",
+    "case3_title": "Multimodal Transport Optimization for a Cross-border E-commerce Company",
+    "case3_desc": "Combined China-Europe Railway Express with ocean freight scheduling, reducing average transit time from 35 days to 18 days and cutting per-container transport costs by 22%.",
+    "view_all": "View All Case Studies"
+  },
+  "news": {
+    "title": "Industry Insights",
+    "description": "Stay informed with the latest global logistics trends and analysis",
+    "item1_title": "Global Ocean Freight Market Outlook",
+    "item1_desc": "Container freight rates are expected to remain stable in Q3 2026, though geopolitical tensions and Red Sea disruptions continue to introduce supply chain uncertainty. We help clients develop data-driven rate forecasts and contract strategies.",
+    "item2_title": "Cross-border E-commerce Logistics Regulations Deep Dive",
+    "item2_desc": "New customs regulations for cross-border e-commerce retail exports raise the bar on declaration processes, shipment tracking, and return compliance. Regulatory compliance is becoming a core competitive advantage for globalizing enterprises.",
+    "item3_title": "CBAM Impact Assessment on EU-bound Logistics",
+    "item3_desc": "As the CBAM transition period concludes, exporters to the EU must systematically assess product carbon footprints and optimize transport routes and modal combinations to prepare for the upcoming carbon border tariffs.",
+    "read_all": "Read All Insights"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "description": "Ready to optimize your global supply chain? Let our experts tailor a solution for you",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_phone": "Phone",
+    "form_company": "Company",
+    "form_message": "Message",
+    "form_submit": "Send Message",
+    "form_placeholder_name": "Your name",
+    "form_placeholder_email": "Your email address",
+    "form_placeholder_phone": "Your phone number",
+    "form_placeholder_company": "Your company name",
+    "form_placeholder_message": "Describe your needs — our experts will get back to you within 24 hours",
+    "form_success": "Message sent successfully! We'll contact you shortly.",
+    "form_error": "Failed to send message. Please try again later or call us directly.",
+    "info_title": "Contact Information",
+    "info_address": "Pudong New Area, Shanghai, China",
+    "info_phone": "+86 21 5888 8888",
+    "info_email": "contact@farhorizon-logistics.com",
+    "info_hours": "Mon - Fri 9:00 - 18:00",
+    "cta_title": "Start Your Logistics Optimization Journey",
+    "cta_button": "Book Free Consultation"
+  },
+  "footer": {
+    "description": "Far Horizon International Logistics Consulting — Making global trade more efficient and reliable",
+    "quick_links": "Quick Links",
+    "services_footer": "Our Services",
+    "contact_footer": "Contact Info",
+    "copyright": "© 2026 Far Horizon Logistics Consulting. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "consultation": {
+    "title": "Live Chat",
+    "subtitle": "Our consultants are online to help",
+    "placeholder": "Type your question...",
+    "send": "Send",
+    "welcome": "Hello! Welcome to Far Horizon International Logistics Consulting. How can we help you today?",
+    "close": "Close",
+    "open": "Open Chat"
+  },
+  "common": {
+    "read_more": "Read More",
+    "learn_more": "Learn More",
+    "contact_us": "Contact Us",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "switch_lang": "Switch Language"
+  }
+}

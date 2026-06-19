@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "title": "远扬国际物流咨询",
+    "description": "专业的国际物流与供应链咨询服务，助力企业全球化运营"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "services": "服务",
+    "cases": "案例",
+    "news": "资讯",
+    "contact": "联系我们"
+  },
+  "hero": {
+    "title": "全球物流，智慧领航",
+    "subtitle": "深耕国际物流咨询二十载，为出海企业提供端到端的供应链解决方案",
+    "cta_primary": "免费咨询",
+    "cta_secondary": "了解服务",
+    "stats_clients": "服务客户",
+    "stats_projects": "成功项目",
+    "stats_countries": "覆盖国家"
+  },
+  "about": {
+    "title": "关于远扬",
+    "description": "远扬国际物流咨询是一家专注于跨境供应链优化的专业咨询机构，在上海、香港、新加坡设有办事处。我们凭借深厚的行业经验和全球化视野，帮助企业在复杂多变的国际贸易环境中实现物流成本优化与运营效率提升。",
+    "mission_title": "我们的使命",
+    "mission": "让每一家出海企业都能拥有世界级的物流竞争力",
+    "vision_title": "我们的愿景",
+    "vision": "成为亚太地区最受信赖的国际物流咨询品牌",
+    "values_title": "核心价值观",
+    "value_professional": "专业",
+    "value_professional_desc": "深耕行业二十年的资深顾问团队",
+    "value_global": "全球",
+    "value_global_desc": "覆盖全球主要贸易区域的本地化服务网络",
+    "value_innovation": "创新",
+    "value_innovation_desc": "持续运用数字技术驱动供应链变革",
+    "value_trust": "信赖",
+    "value_trust_desc": "以客户利益为核心，建立长期伙伴关系"
+  },
+  "why_us": {
+    "title": "为什么选择我们",
+    "description": "二十年深耕，用专业与信赖成就每一次交付"
+  },
+  "services": {
+    "title": "核心服务",
+    "description": "从战略规划到落地执行，提供全方位的物流与供应链咨询服务",
+    "supply_chain_title": "供应链优化",
+    "supply_chain_desc": "端到端供应链诊断与重构，包括网络布局优化、库存策略制定、采购流程再造，帮助企业在成本和效率之间找到最优平衡点。",
+    "freight_title": "货运咨询",
+    "freight_desc": "海运、空运、铁运、多式联运方案设计与承运商管理，基于大数据分析的路线规划和运价谈判策略。",
+    "customs_title": "关务合规",
+    "customs_desc": "进出口关务合规审查、HS编码归类、原产地规则运用、FTA关税优惠利用策略，降低合规风险并节约关税成本。",
+    "warehouse_title": "仓储与配送",
+    "warehouse_desc": "仓库选址与布局优化、WMS系统选型与实施、最后一公里配送方案设计、跨境仓储策略规划。",
+    "trade_title": "贸易合规",
+    "trade_desc": "出口管制与制裁审查、AEO认证辅导、贸易合规管理体系搭建、跨境数据流动合规评估。",
+    "digital_title": "数字化转型",
+    "digital_desc": "物流信息化战略规划、TMS/WMS系统集成、供应链可视化平台搭建、AI驱动的预测与决策支持系统。",
+    "risk_title": "风险管理",
+    "risk_desc": "供应链韧性评估、地缘政治风险分析、应急预案设计与演练、供应商风险分级管理。",
+    "sustainability_title": "绿色物流",
+    "sustainability_desc": "碳排放核算与减排路径规划、绿色运输方案设计、可持续供应链认证咨询、ESG报告支持。"
+  },
+  "cases": {
+    "title": "典型案例",
+    "description": "用真实案例证明我们的咨询价值",
+    "case1_title": "某消费电子企业亚太供应链重组",
+    "case1_desc": "帮助客户将亚太区仓储网络从7个集中至3个区域枢纽，库存周转率提升40%，年物流成本降低25%。",
+    "case2_title": "某汽车零部件企业海关合规体系搭建",
+    "case2_desc": "协助客户完成AEO高级认证，海关查验率从8%降至0.5%，通关时效缩短60%，年节省关税约300万美元。",
+    "case3_title": "某跨境电商企业多式联运方案优化",
+    "case3_desc": "通过中欧班列与海运的组合调度，将平均运输时效从35天缩短至18天，单柜运输成本降低22%。",
+    "view_all": "查看全部案例"
+  },
+  "news": {
+    "title": "行业资讯",
+    "description": "关注全球物流行业最新动态与趋势洞察",
+    "item1_title": "全球海运市场运价走势分析",
+    "item1_desc": "2026年第三季度全球集装箱运价预计将保持稳定，但地缘政治因素与红海局势仍给供应链带来不确定性。我们为企业提供定制化的运价预测与合同策略建议。",
+    "item2_title": "跨境电商物流新规深度解读",
+    "item2_desc": "海关总署发布跨境电商零售出口监管新规，对企业申报流程、物流追踪、退换货合规等方面提出了更高要求，合规运营成为出海企业的核心竞争力。",
+    "item3_title": "欧盟碳边境调节机制（CBAM）物流影响评估",
+    "item3_desc": "CBAM过渡期结束后，出口欧盟企业需系统梳理产品碳足迹，优化运输路线与运输方式组合，以应对即将到来的碳关税挑战。",
+    "read_all": "查看全部资讯"
+  },
+  "contact": {
+    "title": "联系我们",
+    "description": "准备好优化您的全球供应链了吗？让我们的专家为您量身定制方案",
+    "form_name": "姓名",
+    "form_email": "邮箱",
+    "form_phone": "电话",
+    "form_company": "公司名称",
+    "form_message": "需求描述",
+    "form_submit": "发送消息",
+    "form_placeholder_name": "请输入您的姓名",
+    "form_placeholder_email": "请输入您的邮箱",
+    "form_placeholder_phone": "请输入您的电话",
+    "form_placeholder_company": "请输入您所在的公司",
+    "form_placeholder_message": "请描述您的需求，我们的专家将在24小时内与您联系",
+    "form_success": "消息已成功发送，我们将尽快与您联系！",
+    "form_error": "消息发送失败，请稍后重试或直接拨打我们的电话。",
+    "info_title": "联系方式",
+    "info_address": "上海市浦东新区陆家嘴金融贸易区",
+    "info_phone": "+86 21 5888 8888",
+    "info_email": "contact@farhorizon-logistics.com",
+    "info_hours": "周一至周五 9:00 - 18:00",
+    "cta_title": "开启您的物流优化之旅",
+    "cta_button": "预约免费咨询"
+  },
+  "footer": {
+    "description": "远扬国际物流咨询 — 让全球贸易更高效、更可靠",
+    "quick_links": "快速链接",
+    "services_footer": "服务项目",
+    "contact_footer": "联系方式",
+    "copyright": "© 2026 远扬国际物流咨询 版权所有",
+    "privacy": "隐私政策",
+    "terms": "服务条款"
+  },
+  "consultation": {
+    "title": "在线咨询",
+    "subtitle": "我们的顾问在线为您服务",
+    "placeholder": "输入您的问题...",
+    "send": "发送",
+    "welcome": "您好！欢迎来到远扬国际物流咨询。请问有什么可以帮助您的？",
+    "close": "关闭",
+    "open": "打开聊天"
+  },
+  "common": {
+    "read_more": "了解更多",
+    "learn_more": "了解更多",
+    "contact_us": "联系我们",
+    "submit": "提交",
+    "loading": "加载中...",
+    "error": "出错了，请稍后重试",
+    "switch_lang": "切换语言"
+  }
+}
