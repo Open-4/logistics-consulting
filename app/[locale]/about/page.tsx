@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file About page — 公司介绍、使命愿景、核心价值观。
  */
 import { setRequestLocale } from 'next-intl/server';
@@ -7,15 +7,15 @@ import { useTranslations } from 'next-intl';
 const valueKeys = ['professional', 'global', 'innovation', 'trust'] as const;
 
 const zhExpertise = [
-  { title: '国际货运咨询', desc: '海运、空运、铁路及多式联运方案设计、路线对比与服务商推荐' },
-  { title: '海关合规咨询', desc: 'HS编码归类指导、关税筹划方案、清关流程咨询与问题诊断' },
-  { title: '供应链咨询', desc: '供应链网络设计、运输模式优化、成本管控方案建议' },
-  { title: '数字化物流咨询', desc: '物流系统选型建议、数字化方案对比、技术实施指导' },
+  { title: '专家匹配服务', desc: '根据您的物流需求，免费为您匹配合适的行业专家，确保专业对口' },
+  { title: '方案对比建议', desc: '提供多家物流服务商的方案对比信息，帮助您做出更明智的选择' },
+  { title: '信息咨询支持', desc: '解答您的国际物流疑问，包括运输方式、清关要求、税费计算等' },
+  { title: '服务商推荐', desc: '基于您的需求和预算，推荐可靠的物流服务商供您选择' },
 ];const enExpertise = [
-  { title: 'Freight Consulting', desc: 'Ocean, air, rail and multimodal transport solutions, route comparison and provider recommendations' },
-  { title: 'Customs Compliance', desc: 'HS code guidance, tariff planning, customs process consulting and issue diagnosis' },
-  { title: 'Supply Chain Advisory', desc: 'Network design, transport mode optimization, cost management recommendations' },
-  { title: 'Digital Logistics', desc: 'System selection advice, digital solution comparison, technology implementation guidance' },
+  { title: 'Expert Matching', desc: 'Free matching with verified industry experts based on your specific logistics needs' },
+  { title: 'Solution Comparison', desc: 'Compare multiple logistics providers and solutions to find the best fit' },
+  { title: 'Information Support', desc: 'Get answers to your logistics questions about shipping, customs, duties and more' },
+  { title: 'Provider Referral', desc: 'Personalized recommendations of reliable logistics providers matching your needs and budget' },
 ];export default function AboutPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale);
   const t = useTranslations('about');
