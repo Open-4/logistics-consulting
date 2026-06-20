@@ -27,7 +27,7 @@ const CONTACTS: ContactItem[] = [
       </svg>
     ),
     labelKey: 'info_phone',
-    value: '021-XXXX-XXXX',
+    value: '请通过表单联系',
   },
   {
     key: 'email',
@@ -50,7 +50,7 @@ const CONTACTS: ContactItem[] = [
       </svg>
     ),
     labelKey: 'info_whatsapp_label',
-    value: '+86 138 0000 0000',
+    value: '请通过表单或邮件联系',
     external: false,
   },
 ];

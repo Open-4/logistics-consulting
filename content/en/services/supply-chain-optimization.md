@@ -1,16 +1,22 @@
 ﻿---
-title: "Supply Chain Optimization"
-description: "End-to-end supply chain diagnosis and restructuring for optimal cost-efficiency balance"
-date: "2026-06-15"
-category: "supply-chain"
-tags: ["supply-chain", "optimization", "cost-control", "efficiency"]
+title: Supply Chain Optimization
+description: Network design principles, inventory optimization, transport cost control strategies
 ---
-## Overview
-We provide comprehensive supply chain optimization services from strategic planning to execution.
-## Core Capabilities
-- **Network Optimization**: Evaluate existing warehousing and distribution networks
-- **Inventory Strategy**: Design differentiated inventory management strategies
-- **Procurement Reengineering**: Optimize supplier management systems
-- **End-to-End Visibility**: Build supply chain control towers for real-time visibility
-## Ideal For
-Manufacturing and trading enterprises experiencing rapid growth or seeking efficiency improvements.
+
+## Network Design Principles
+
+Supply chain network design is the most strategic decision in optimization.
+
+**Centralized vs Decentralized:** Central warehousing lowers inventory costs but increases delivery distance. Decentralization shortens delivery time but raises inventory costs.
+
+**Key location factors:** Proximity to customers, transportation access, labor availability, facility costs. A good rule is 3-4 regional distribution centers for national coverage.
+
+## Inventory Optimization
+
+**ABC Classification:** A items (top 20% revenue) need tight management and higher safety stock; C items (bottom 50%) can have simpler management.
+
+**Safety Stock Formula:** Z × √(LT × σ²D + D² × σ²LT) where Z is service level coefficient (1.65 for 95% service level).
+
+## Transport Cost Control
+
+Costs break down to ~60% base freight and ~40% surcharges. Control strategies include annual contracts (20-40% below spot rates), shipment consolidation, modal optimization, and carrier performance management.
