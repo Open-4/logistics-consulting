@@ -1,20 +1,16 @@
-﻿/**
+/**
  * @file Home page for the international logistics consulting website.
- * Sections: Hero, Services, Why Choose Us, Case Studies, Insights, CTA.
- * All visible text is read from next-intl translation files.
  */
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
+import { getContentItems } from '@/lib/mdx';
 
 const featuredServices = ['supply_chain', 'freight', 'digital'] as const;
 const valueKeys = ['professional', 'global', 'innovation', 'trust'] as const;
-const caseKeys = ['case1', 'case2', 'case3'] as const;
-const newsKeys = ['item1', 'item2', 'item3'] as const;
 
 export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
-    setRequestLocale(locale);
-
+  setRequestLocale(locale);
   const th = useTranslations('hero');
   const ts = useTranslations('services');
   const ta = useTranslations('about');
@@ -23,6 +19,9 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
   const tn = useTranslations('news');
   const tcontact = useTranslations('contact');
   const tcommon = useTranslations('common');
+  const tg = useTranslations('guide');
+  const topCases = getContentItems(locale, 'cases').slice(0, 3);
+  const topNews = getContentItems(locale, 'news').slice(0, 3);
 
   return (
     <main>
@@ -34,13 +33,13 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             <p className="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed max-w-2xl">{th('subtitle')}</p>
             <div className="mt-10 flex flex-wrap gap-4">
               <Link href="/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-brand-600 font-semibold text-sm shadow-lg hover:bg-blue-50 transition-all hover:shadow-xl">{th('cta_primary')}</Link>
-              <Link href="/services" className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-all">{th('cta_secondary')}</Link>
+              <Link href="/tools" className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-all">{th('cta_secondary')}</Link>
             </div>
           </div>
           <div className="mt-16 grid grid-cols-3 gap-8 sm:gap-12 max-w-lg">
-            <div><p className="text-3xl sm:text-4xl font-bold">500+</p><p className="mt-1 text-sm text-blue-200">{th('stats_clients')}</p></div>
-            <div><p className="text-3xl sm:text-4xl font-bold">1200+</p><p className="mt-1 text-sm text-blue-200">{th('stats_projects')}</p></div>
-            <div><p className="text-3xl sm:text-4xl font-bold">50+</p><p className="mt-1 text-sm text-blue-200">{th('stats_countries')}</p></div>
+            <div><p className="text-3xl sm:text-4xl font-bold">100+</p><p className="mt-1 text-sm text-blue-200">{th('stats_projects')}</p></div>
+            <div><p className="text-3xl sm:text-4xl font-bold">20+</p><p className="mt-1 text-sm text-blue-200">{th('stats_clients')}</p></div>
+            <div><p className="text-3xl sm:text-4xl font-bold">10+</p><p className="mt-1 text-sm text-blue-200">{th('stats_countries')}</p></div>
           </div>
         </div>
       </section>
@@ -74,8 +73,8 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             {valueKeys.map((key) => (
               <div key={key} className="text-center">
                 <div className="w-16 h-16 rounded-full bg-brand-50 text-brand-500 flex items-center justify-center mx-auto mb-4"><ValueIcon name={key} /></div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{ta('value_' + key)}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{ta('value_' + key + '_desc')}</p>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{tw(key + '_title')}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{tw(key + '_desc')}</p>
               </div>
             ))}
           </div>
@@ -89,18 +88,18 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             <p className="mt-4 text-lg text-gray-600">{tc('description')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {caseKeys.map((key) => (
-              <div key={key} className="rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                <div className="h-48 bg-gradient-to-br from-brand-100 to-brand-50 flex items-center justify-center"><CaseIcon name={key} /></div>
+            {topCases.map((c) => (
+              <Link key={c.slug} href={'/cases/' + c.slug} className="rounded-2xl border border-gray-100 bg-white overflow-hidden shadow-sm hover:shadow-md transition-all">
+                <div className="h-48 bg-gradient-to-br from-brand-100 to-brand-50 flex items-center justify-center"><CaseIcon name={c.slug} /></div>
                 <div className="p-6">
-                  <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2">{tc(key + '_title')}</h3>
-                  <p className="text-sm text-gray-600 leading-relaxed line-clamp-4">{tc(key + '_desc')}</p>
+                  <h3 className="text-base font-semibold text-gray-900 mb-3 line-clamp-2">{c.title}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed line-clamp-4">{c.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link href="/cases" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors">{tc('view_all')}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></Link>
+            <Link href="/cases" className="inline-flex items-center gap-2 text-sm font-semibold text-brand-500 hover:text-brand-600 transition-colors">{tcommon('learn_more')}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg></Link>
           </div>
         </div>
       </section>
@@ -112,12 +111,12 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
             <p className="mt-4 text-lg text-gray-600">{tn('description')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {newsKeys.map((key, i) => (
-              <div key={key} className="group rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-md transition-shadow">
-                <div className="flex items-center gap-2 mb-4"><span className="w-2 h-2 rounded-full bg-brand-500" /><span className="text-xs text-gray-400">2026-06-{(15 - i * 5).toString().padStart(2, '0')}</span></div>
-                <h3 className="text-base font-semibold text-gray-900 mb-3 group-hover:text-brand-500 transition-colors line-clamp-2">{tn(key + '_title')}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4">{tn(key + '_desc')}</p>
-                <Link href={'/news/' + key} className="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 transition-colors">{tcommon('read_more')}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg></Link>
+            {topNews.map((article, i) => (
+              <div key={article.slug} className="group rounded-2xl border border-gray-200 bg-white p-6 hover:shadow-md transition-shadow">
+                <div className="flex items-center gap-2 mb-4"><span className="w-2 h-2 rounded-full bg-brand-500" /><span className="text-xs text-gray-400">{article.date}</span></div>
+                <h3 className="text-base font-semibold text-gray-900 mb-3 group-hover:text-brand-500 transition-colors line-clamp-2">{article.title}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed line-clamp-3 mb-4">{article.description}</p>
+                <Link href={'/news/' + article.slug} className="inline-flex items-center gap-1 text-sm font-medium text-brand-500 hover:text-brand-600 transition-colors">{tcommon('learn_more')}<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" /></svg></Link>
               </div>
             ))}
           </div>
@@ -133,6 +132,40 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <p className="mt-4 text-lg text-blue-100 max-w-2xl mx-auto">{tcontact('description')}</p>
           <div className="mt-10">
             <Link href="/contact" className="inline-flex items-center px-8 py-3.5 rounded-lg bg-white text-brand-600 font-semibold text-sm shadow-lg hover:bg-blue-50 transition-all hover:shadow-xl">{tcontact('cta_button')}</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">{tg('title')}</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-10 max-w-4xl mx-auto">
+            {[1,2,3].map(num => (
+              <div key={num} className="text-center">
+                <div className="w-14 h-14 rounded-full gradient-brand text-white flex items-center justify-center mx-auto mb-4 text-lg font-bold shadow-lg">{num}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{tg('step' + num + '_title')}</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">{tg('step' + num + '_desc')}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-20 lg:py-24 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">{'实用工具'}</h2>
+            <p className="mt-4 text-lg text-gray-600">{'实时查询国际海运、空运和铁路运价与时效'}</p>
+          </div>
+          <div className="bg-gradient-to-br from-brand-50 to-blue-50 rounded-2xl p-8 sm:p-12 text-center max-w-2xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">{'国际物流运价时效查询'}</h3>
+            <p className="text-gray-600 mb-6">{'覆盖全球主要航线，实时参考运价、运输时效和班期信息'}</p>
+            <Link href="/tools" className="inline-flex items-center gap-2 px-6 py-3 gradient-brand text-white font-semibold text-sm rounded-lg hover:opacity-90 transition-all shadow-lg">
+              {"立即查询"}
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
           </div>
         </div>
       </section>
@@ -159,11 +192,10 @@ function ValueIcon({ name }: { name: string }) {
   }
 }
 
-function CaseIcon({ name }: { name: string }) {
-  switch (name) {
-    case 'case1': return (<svg className="w-16 h-16 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" /></svg>);
-    case 'case2': return (<svg className="w-16 h-16 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" /><rect x="9" y="3" width="6" height="4" rx="1" /><path d="M9 14l2 2 4-4" /></svg>);
-    case 'case3': return (<svg className="w-16 h-16 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>);
-    default: return null;
+function CaseIcon({ name: _n }: { name: string }) {
+  switch (_n) {
+    default: return (<svg className="w-16 h-16 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" /></svg>);
+    case 'consumer-electronics': return (<svg className="w-16 h-16 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2" /><rect x="9" y="3" width="6" height="4" rx="1" /><path d="M9 14l2 2 4-4" /></svg>);
+    case 'heavy-lift-project': return (<svg className="w-16 h-16 text-brand-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>);
   }
 }

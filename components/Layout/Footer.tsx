@@ -52,7 +52,7 @@ export default function Footer({ className = '' }: FooterProps) {
               </svg>
               <span className="text-lg font-bold text-white">Far Horizon</span>
             </div>
-            <p className="text-sm leading-relaxed text-gray-400 mb-6">
+            <p className="text-sm font-semibold text-white mb-1">{tf('company_name')}</p>`n            <p className="text-xs text-gray-400 mb-3">{tf('address')}</p>`n            <p className="text-sm leading-relaxed text-gray-400 mb-6">
               {tf('description')}
             </p>
           </div>
@@ -136,7 +136,7 @@ export default function Footer({ className = '' }: FooterProps) {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-gray-500">{tf('copyright')}</p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
+            <span className="text-xs text-gray-600">{tf('icp')}</span>`n            <Link href="/privacy" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">
               {tf('privacy')}
             </Link>
             <Link href="/terms" className="text-xs text-gray-500 hover:text-gray-300 transition-colors">

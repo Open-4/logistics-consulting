@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Root layout for each locale segment.
  * Sets up HTML/body structure, Meta tags, and next-intl provider.
  * @see https://next-intl.dev/docs/environments/server-client-components
@@ -10,6 +10,7 @@ import { notFound } from 'next/navigation';
 import Navbar from '@/components/Layout/Navbar';
 import Footer from '@/components/Layout/Footer';
 import ChatWidget from '@/components/Chat/ChatWidget';
+import CookieConsent from '@/components/common/CookieConsent';
 import '../globals.css';
 
 const locales = ['en', 'zh'];
@@ -61,6 +62,7 @@ export default async function LocaleLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
           <ChatWidget />
+          <CookieConsent />
         </NextIntlClientProvider>
       </body>
     </html>

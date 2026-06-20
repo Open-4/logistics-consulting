@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @file Responsive navigation bar with mobile hamburger menu and locale switcher.
  * All visible text is read from next-intl translation files.
  */
@@ -8,6 +8,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useTranslations, useLocale } from 'next-intl';
+import ClientPortal from '@/components/Client/ClientPortal';
 
 /** Navigation item structure */
 interface NavItem {
@@ -24,6 +25,7 @@ interface NavbarProps {
 const navItems: NavItem[] = [
   { key: 'home', href: '/' },
   { key: 'services', href: '/services' },
+  { key: 'tools', href: '/tools' },
   { key: 'cases', href: '/cases' },
   { key: 'news', href: '/news' },
   { key: 'about', href: '/about' },
@@ -41,6 +43,8 @@ export default function Navbar({ className = '' }: NavbarProps) {
   const pathname = usePathname();
   const router = useRouter();
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const t_client = useTranslations('client');
 
   /** Switch current locale while keeping the same page path */
   const switchLocale = (newLocale: string) => {
@@ -99,6 +103,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
         {/* Language Switcher + Mobile Toggle */}
         <div className="flex items-center gap-2">
           {/* Desktop Language Toggle */}
+          <button onClick={() => setIsLoginOpen(true)} className="hidden md:inline-flex px-3 py-1.5 text-sm font-medium text-brand-500 border border-brand-500 rounded-lg hover:bg-brand-50 transition-colors">{t_client('login_btn')}</button>
           <div className="hidden md:flex items-center border border-gray-200 rounded-lg overflow-hidden">
             <button
               onClick={() => switchLocale('zh')}
@@ -194,6 +199,7 @@ export default function Navbar({ className = '' }: NavbarProps) {
           </ul>
         </div>
       )}
+    <ClientPortal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
     </header>
   );
 }

@@ -6,7 +6,17 @@ import { useTranslations } from 'next-intl';
 
 const valueKeys = ['professional', 'global', 'innovation', 'trust'] as const;
 
-export default function AboutPage({ params: { locale } }: { params: { locale: string } }) {
+const zhExpertise = [
+  { title: '国际货运咨询', desc: '海运、空运、铁路及多式联运方案设计、路线对比与服务商推荐' },
+  { title: '海关合规咨询', desc: 'HS编码归类指导、关税筹划方案、清关流程咨询与问题诊断' },
+  { title: '供应链咨询', desc: '供应链网络设计、运输模式优化、成本管控方案建议' },
+  { title: '数字化物流咨询', desc: '物流系统选型建议、数字化方案对比、技术实施指导' },
+];const enExpertise = [
+  { title: 'Freight Consulting', desc: 'Ocean, air, rail and multimodal transport solutions, route comparison and provider recommendations' },
+  { title: 'Customs Compliance', desc: 'HS code guidance, tariff planning, customs process consulting and issue diagnosis' },
+  { title: 'Supply Chain Advisory', desc: 'Network design, transport mode optimization, cost management recommendations' },
+  { title: 'Digital Logistics', desc: 'System selection advice, digital solution comparison, technology implementation guidance' },
+];export default function AboutPage({ params: { locale } }: { params: { locale: string } }) {
   setRequestLocale(locale);
   const t = useTranslations('about');
   const tcommon = useTranslations('common');
@@ -63,6 +73,44 @@ export default function AboutPage({ params: { locale } }: { params: { locale: st
         </div>
       </section>
 
+      {/* Company Info */}
+      <section className="py-16 bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="p-8 rounded-2xl border border-gray-100 bg-gray-50 text-center">
+                <p className="text-3xl font-bold text-brand-500">2026</p>
+                <p className="text-sm text-gray-600 mt-1">{t('founded')}</p>
+              </div>
+              <div className="p-8 rounded-2xl border border-gray-100 bg-gray-50 text-center">
+                <p className="text-3xl font-bold text-brand-500">—</p>
+                <p className="text-sm text-gray-600 mt-1">{t('team_size')}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Core Team */}
+      <section className="py-16 bg-gray-50">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900">{t('team_section_title')}</h2>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {(locale === "en" ? enExpertise : zhExpertise).map((item: {title:string;desc:string}, i: number) => (
+              <div key={i} className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
+                <div className="w-14 h-14 rounded-full bg-brand-50 text-brand-500 flex items-center justify-center mx-auto mb-4 text-lg font-bold">
+                  {i + 1}
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.title}</h3>
+                
+                <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       {/* CTA */}
       <section className="py-16 bg-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">

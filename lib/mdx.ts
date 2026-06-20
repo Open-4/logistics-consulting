@@ -1,4 +1,4 @@
-﻿/**
+/**
  * @file MDX/Markdown content loader with frontmatter parsing and filtering.
  * Content files are stored under /content/{locale}/{type}/.
  */
@@ -31,7 +31,7 @@ function parseFile(filePath: string, locale: string, type: string): ContentItem 
   try {
     const raw = fs.readFileSync(filePath, 'utf-8');
     const { data, content } = matter(raw);
-    const slug = path.basename(filePath, '.md');
+    const slug = path.basename(filePath).replace(/\.(md|mdx)$/, '');
     return {
       slug,
       title: data.title || slug,
@@ -62,9 +62,12 @@ export function getContentItems(locale: string, type: 'services' | 'cases' | 'ne
 }
 
 export function getContentItem(locale: string, type: string, slug: string): ContentItem | null {
-  const filePath = path.join(getContentDir(locale, type), slug + '.md');
-  if (!fs.existsSync(filePath)) return null;
-  return parseFile(filePath, locale, type);
+  const dir = getContentDir(locale, type);
+  let filePath = path.join(dir, slug + '.md');
+  if (fs.existsSync(filePath)) return parseFile(filePath, locale, type);
+  filePath = path.join(dir, slug + '.mdx');
+  if (fs.existsSync(filePath)) return parseFile(filePath, locale, type);
+  return null;
 }
 
 export function getRelatedItems(locale: string, type: string, currentSlug: string, tags: string[], limit = 3): ContentItem[] {
@@ -116,4 +119,3 @@ export function renderMarkdown(md: string): string {
 
   return processed.join('\n');
 }
-
