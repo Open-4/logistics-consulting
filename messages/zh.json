@@ -10,7 +10,8 @@
                 "cases":  "案例",
                 "news":  "资讯",
                 "contact":  "联系我们",
-                "tools":  "工具"
+                "tools":  "工具",
+                "pricing":  "定价"
             },
     "hero":  {
                  "title":  "国际物流难题？我们帮您找到答案",
@@ -321,6 +322,21 @@
                    "status_completed":  "已完成",
                    "login_title":  "客户登录"
                },
+    "pricing": {
+      "title": "选择适合您的方案",
+      "description": "免费版满足日常查询需求，专业版解锁全部功能和无限查询",
+      "free_title": "免费版",
+      "free_desc": "适合偶尔查询的用户",
+      "free_price": "免费",
+      "free_features": ["每日5次AI合规查询", "每日5次运价查询", "知识库全文搜索", "AI对话助手"],
+      "free_cta": "开始免费使用",
+      "pro_title": "专业版",
+      "pro_desc": "适合外贸企业和高频用户",
+      "pro_price": "$19/月",
+      "pro_features": ["无限次AI合规查询", "无限次运价查询", "详细合规报告", "优先客服支持", "历史查询记录"],
+      "pro_cta": "订阅专业版",
+      "popular": "最受欢迎"
+    },
     "upgrade":  {
                     "feature_unlimited":  "无限次工具查询",
                     "feature_priority":  "优先响应",

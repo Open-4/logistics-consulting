@@ -24,6 +24,7 @@ interface NavbarProps {
 
 const navItems: NavItem[] = [
   { key: 'home', href: '/' },
+  { key: 'pricing', href: '/pricing' },
   { key: 'services', href: '/services' },
   { key: 'tools', href: '/tools' },
   { key: 'cases', href: '/cases' },

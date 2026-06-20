@@ -10,7 +10,8 @@
                 "cases":  "Case Studies",
                 "news":  "News",
                 "contact":  "Contact",
-                "tools":  "Tools"
+                "tools":  "Tools",
+                "pricing":  "Pricing"
             },
     "hero":  {
                  "title":  "Logistics challenges? We help you find answers.",
@@ -321,6 +322,21 @@
                    "status_completed":  "Completed",
                    "login_title":  "Client Login"
                },
+    "pricing": {
+      "title": "Choose Your Plan",
+      "description": "Free tier for occasional queries, Pro unlocks everything",
+      "free_title": "Free",
+      "free_desc": "For casual users",
+      "free_price": "Free",
+      "free_features": ["5 AI compliance queries/day", "5 rate queries/day", "Knowledge base search", "AI chat assistant"],
+      "free_cta": "Start Free",
+      "pro_title": "Pro",
+      "pro_desc": "For businesses and power users",
+      "pro_price": "$19/month",
+      "pro_features": ["Unlimited AI compliance queries", "Unlimited rate queries", "Detailed compliance reports", "Priority support", "Query history"],
+      "pro_cta": "Subscribe Now",
+      "popular": "Most Popular"
+    },
     "upgrade":  {
                     "feature_unlimited":  "Unlimited tool queries",
                     "feature_priority":  "Priority response",
