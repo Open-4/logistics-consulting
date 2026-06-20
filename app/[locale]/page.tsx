@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
 import { getContentItems } from '@/lib/mdx';
+import SearchBar from '@/components/common/SearchBar';
 
 const featuredServices = ['supply_chain', 'freight', 'digital'] as const;
 const valueKeys = ['professional', 'global', 'innovation', 'trust'] as const;
@@ -31,8 +32,11 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <div className="max-w-3xl">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">{th('title')}</h1>
             <p className="mt-6 text-lg sm:text-xl text-blue-100 leading-relaxed max-w-2xl">{th('subtitle')}</p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link href="/contact" className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-brand-600 font-semibold text-sm shadow-lg hover:bg-blue-50 transition-all hover:shadow-xl">{th('cta_primary')}</Link>
+            <div className="mt-8 mb-10">
+              <SearchBar variant="hero" />
+            </div>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link href="/services" className="inline-flex items-center px-6 py-3 rounded-lg bg-white text-brand-600 font-semibold text-sm shadow-lg hover:bg-blue-50 transition-all hover:shadow-xl">{th('cta_primary')}</Link>
               <Link href="/tools" className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-white/30 text-white font-semibold text-sm hover:bg-white/10 transition-all">{th('cta_secondary')}</Link>
             </div>
           </div>
@@ -131,7 +135,7 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">{tcontact('cta_title')}</h2>
           <p className="mt-4 text-lg text-blue-100 max-w-2xl mx-auto">{tcontact('description')}</p>
           <div className="mt-10">
-            <Link href="/contact" className="inline-flex items-center px-8 py-3.5 rounded-lg bg-white text-brand-600 font-semibold text-sm shadow-lg hover:bg-blue-50 transition-all hover:shadow-xl">{tcontact('cta_button')}</Link>
+            <Link href="/services" className="inline-flex items-center px-8 py-3.5 rounded-lg bg-white text-brand-600 font-semibold text-sm shadow-lg hover:bg-blue-50 transition-all hover:shadow-xl">{tcontact('cta_button')}</Link>
           </div>
         </div>
       </section>
